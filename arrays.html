@@ -1,0 +1,44 @@
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <title>JS para diseñadores. Operaciones con Arrays</title>
+
+        <link rel="stylesheet" href="">
+    </head>
+    <body>
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12"></div>
+            </div>
+        </div>
+        <script>
+            var numeros = [1, 2, 5, 8, 9, 7];
+            var frutas = ['naranja', 'banana', 'pera', 'manzana'];
+            var listado = new Array();//listado = [];
+            var elemento;
+            var versionTexto;
+            var versionArray;
+            var SEPARADOR= '---------------';
+
+            console.log('Numeros: ' +numeros);
+            console.log('Frutas: '+frutas);
+            console.log(SEPARADOR);
+            
+            console.log('Primer numero: '+numeros[0]);
+            console.log('Tercera fruta: '+frutas[2]);
+            console.log('cantidad de frutas: '+frutas.length);
+            console.log('Posicion de la manzana: '+frutas.indexOf('manzana'));
+            console.log(SEPARADOR);
+
+            //insertar elementos por el final
+            numeros.push(4);//el metodo unshift lo hace por el inicio
+            console.log('tras insertar: '+numeros);
+
+            elemento = 'granada';
+            frutas.push(elemento);
+            console.log('tras insertar '+frutas);
+
+        </script>
+    </body>
+
+</html>

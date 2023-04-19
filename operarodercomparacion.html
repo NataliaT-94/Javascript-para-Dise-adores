@@ -1,0 +1,38 @@
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <title>JS para diseñadores. Precedencia de operadores</title>
+
+        <link rel="stylesheet" href="">
+    </head>
+    <body>
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12"></div>
+            </div>
+        </div>
+        <script>
+            var a = 10;
+            var b = 2;
+            var c = 5;
+
+            var cadena10 = '10';
+            var nombre1 = "Marcos";
+            var nombre2 = "Pedro";
+
+            console.log('igualdad: ' + (a==b) );//false
+            console.log('distinto: ' + (a!=b) );//true
+            console.log('igualdad absoluta: ' + (a===c) );//true
+            console.log('igualdad absoluta: ' + (a===cadena10) );//false
+
+            console.log('mayor que: ' + (a > b) );//true
+            console.log('menor que: ' + (a < b) );//false
+            console.log('mayor o igual: ' + (a >= c) );//true
+            console.log('y en cadenas: ' + (nombre1 > nombre2) );//false
+
+   
+
+        </script>
+    </body>
+
+</html>

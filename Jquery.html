@@ -1,0 +1,64 @@
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <title>JS para diseñadores. DOM y JS ($)</title>
+
+        <link rel="stylesheet" href="">
+        <style type="text/css" media="screen">
+            .destacado {
+                color: blueviolet;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12"></div>
+                <h1 id="nombre">Nombre del detalle</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci temporibus nulla laborum dolorum neque perferendis veniam, delectus dolore officiis eaque explicabo sunt reiciendis tenetur suscipit atque, optio odio quia aliquid.
+                </p>
+                <blockquote>
+                    <p id="descripcion">Esto es una descripcion</p>
+                </blockquote>
+                <footer>
+                    <script>
+                        var fecha = new Date();
+                        var dia =fecha.getDate();
+                        var mes =fecha.getMonth();
+                        var anio =fecha.getFullYear();
+                        document.write(dia+'/'+mes+'/'+anio);
+                    </script>
+                </footer>
+            </div>
+        </div>
+        <script>
+            var elemento;
+            var descripcion;
+
+            descripcion = document.getElementById('descripcion').innerHTML;
+            console.log(descripcion);
+            descripcion += 'Modificada.';
+            descripcion = document.getElementById('descripcion').innerHTML = descripcion;
+
+            elemento = document.querySelector('h1');
+            elemento.className += 'destacado';
+
+            $('#descripcion');
+            document.getElementsByClassName('descripcion');
+
+            $('h1');
+            document.getElementsByTagName('h1');
+
+            $('p.nombre-clase');
+            document.querySelectorAll('p.nombre-clase');   
+            
+/*
+            document.getElementsByClassName('nombre-clase');
+            document.getElementsByTagName('etiquetas');
+            document.querySelector('p.nombre-clase'); // devuelve el primero
+            document.querySelectorAll('p.nombre-clase'); // devuelve todos   
+*/
+        </script>
+    </body>
+
+</html>

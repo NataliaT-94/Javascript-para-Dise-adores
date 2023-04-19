@@ -1,0 +1,42 @@
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <title>JS para diseñadores. Operaciones con objetos</title>
+
+        <link rel="stylesheet" href="">
+    </head>
+    <body>
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12"></div>
+            </div>
+        </div>
+        <script>
+            var persona_1 = {nombre: 'Pedro', apellido:'picapiedra', edad:48, casado:true}
+            var SEPARADOR = '-------------';
+
+            var persona_2 = new Object();
+            persona_2.nombre ='Pablo';
+            persona_2.apellido = 'Marmol';
+            persona_2.edad = 48;
+            persona_2.casado = true;
+
+            console.log('Persona 1: '+persona_1);
+            console.log('Persona 2: '+persona_2);
+            console.log(SEPARADOR);
+            
+            console.log('Nombre de Persona 1: '+persona_1.nombre);
+            console.log('Edad de Persona 2: '+persona_2.edad);
+            console.log(SEPARADOR);
+            
+            //añadir propiedades o modificarlas
+            persona_1.profesion ='fontanero';
+            persona_2.edad = 42;
+            console.log('Persona 1: '+persona_1);
+            console.log('Persona 2: '+persona_2);
+            console.log(SEPARADOR);
+            
+        </script>
+    </body>
+
+</html>

@@ -1,0 +1,32 @@
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <title>JS para diseñadores. Operaciones con datos de texto</title>
+
+        <link rel="stylesheet" href="">
+    </head>
+    <body>
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12"></div>
+            </div>
+        </div>
+        <script>
+            var inicio = "Es un lugar de la mancha...";
+            var fin = "de cuyo nombre no quiero acordarme...";
+            var completa = inicio + fin;
+
+            console.log('principio original: ' + inicio);
+            console.log('Mayusculas: '+inicio.toUpperCase());
+            console.log('Minusculas: '+inicio.toLowerCase());
+            console.log('Longitud de la inicio: '+inicio.length);
+            console.log('Letra posicion 3: '+inicio.charAt(3));
+            console.log('posicion palabra "lugar": '+inicio.indexOf('lugar'));
+            console.log('Extraccion "En": '+inicio.substring(0,2));
+            console.log('Completa: '+completa);
+
+
+        </script>
+    </body>
+
+</html>
