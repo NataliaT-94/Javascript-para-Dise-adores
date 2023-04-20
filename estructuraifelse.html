@@ -14,7 +14,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-xs-12"></div>
-                    <h1>Estructura iterativa For</h1>
+                    <h1>Estructura IF ELSE</h1>
                 </div>
                 <div class="col-xs-12"></div>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci temporibus nulla laborum dolorum neque perferendis veniam, delectus dolore officiis eaque explicabo sunt reiciendis tenetur suscipit atque, optio odio quia aliquid.
@@ -28,17 +28,24 @@
                     </ul>
                 </div>
                 <script>
-                    var elementos;
-                    var i;
-                    var longitud;
+                   var elementos = document.getElementById('menu').className;
 
-                    elementos = document.querySelectorAll('#menu>li');
-                    i = 0;
-                    longitud = elementos.length;
+                   if(elementos.indexOf('prueba'>= 0)){
+                       //instrucciones si se cumple condicional
+                       console.log('El menu tiene la classe prueba.');
+                       
+                    }else if(elementos.indexOf('lis-inlne'>= 0)){
+                        //instrucciones si se cumple condiciona2
+                        console.log('El menu tiene la classe lis-inline.');
+                        
+                    }
+                    else{
+                        //instrucciones si no se cumplen ningunas de las anteriores condiciones
+                        console.log('El menu tiene la ninguna classe.');
 
-                    for(i=0; i<longitud; i++) {
-                        elementos[i].style.fontSide = '50px';
-                    };
+                   }
+
+                 
                 </script>
             </div>
         </div>
