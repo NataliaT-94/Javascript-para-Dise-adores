@@ -1,0 +1,54 @@
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <title>JS para diseñadores. Estructuras de control</title>
+
+        <link rel="stylesheet" href="">
+        <style type="text/css" media="screen">
+            .seleccionado {
+                background-color: blueviolet;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12"></div>
+                    <h1>Estructura iterativa: while</h1>
+                </div>
+                <div class="col-xs-12"></div>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci temporibus nulla laborum dolorum neque perferendis veniam, delectus dolore officiis eaque explicabo sunt reiciendis tenetur suscipit atque, optio odio quia aliquid.
+                    </p>
+                    <ul id="menu" class="list-inline">
+                        <li>Primero</li>
+                        <li>Segundo</li>
+                        <li>Tercero</li>
+                        <li class="seleccionado">Cuarto</li>
+                        <li>Quinto</li>
+                    </ul>
+                </div>
+                <script>
+                    var elementos;
+                    var i;
+                    var longitud;
+                    var finalizar;
+                    
+                    elementos = document.getElementById('#menu>li');
+                    i = 0;
+                    longitud = elementos.length;
+                    finalizar = false;
+                    while (i<longitud && finalizar == false){
+                        elementos[i].style.fontSize = '20px';
+                        if(elementos [i].className.indexOf('seleccionado') >=0){
+                            finalizar = true;
+                        }
+                        else{
+                            i++;
+                        }
+                    }
+                </script>
+            </div>
+        </div>
+    </body>
+
+</html>
