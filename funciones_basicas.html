@@ -1,0 +1,66 @@
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <title>JS para diseñadores. Funciones</title>
+
+        <link rel="stylesheet" href="">
+        <style type="text/css" media="screen">
+            .seleccionado {
+                background-color: blueviolet;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12"></div>
+                    <h1>Funciones basicas</h1>
+                </div>
+                <div class="col-xs-12"></div>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci temporibus nulla laborum dolorum neque perferendis veniam, delectus dolore officiis eaque explicabo sunt reiciendis tenetur suscipit atque, optio odio quia aliquid.
+                    </p>
+                    <ul id="menu-A" class="list-inline">
+                        <li>Primero</li>
+                        <li>Segundo</li>
+                        <li>Tercero</li>
+                        <li class="seleccionado">Cuarto</li>
+                        <li>Quinto</li>
+                    </ul>
+                    <ul id="menu-B" class="list-inline">
+                        <li>Primero</li>
+                        <li>Segundo</li>
+                        <li>Tercero</li>
+                        <li class="seleccionado">Cuarto</li>
+                        <li>Quinto</li>
+                    </ul>
+                </div>
+                <script>
+                    function estilizarMenu(menu) {
+
+                        var tamanioBase = 12;
+                        var i;
+                        var longitud;
+                        var colores = ['blueviolet', 'red', 'blue', 'green', 'grey'];
+                        var elementos;
+                    
+                        elementos = document.querySelectorAll(menu+'>li');
+
+                        longitud = elementos.length;
+                        for(i=0; i<longitud; i++){
+                            elementos[i].style.color = colores[i];
+                            elementos[i].style.fontSize = tamanioBase + i*2 +'px';
+                            
+                        }
+
+                    }
+
+                    estilizarMenu( '#menu-A' );
+                    estilizarMenu( '#menu-B' );
+
+
+                </script>
+            </div>
+        </div>
+    </body>
+
+</html>

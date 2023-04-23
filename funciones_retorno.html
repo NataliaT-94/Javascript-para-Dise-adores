@@ -1,0 +1,58 @@
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <title>JS para diseñadores. Funcion</title>
+
+        <link rel="stylesheet" href="">
+        <style type="text/css" media="screen">
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12"></div>
+                <h1>Funciones de retorno</h1>
+            </div>
+            <div class="row">
+                <div class="col-xs-12"></div>
+                    <div id="resultado"></div>
+
+                </div>
+            </div>
+                <script>
+                    var capaResultado = document.getElementById('resultado');
+
+                    function aRGB(hexadecimal) {
+                        var valorHex;
+                        if (hexadecimal.chartAt(8) ==="#") {
+                            valorHex = hexadecimal.substring(1,7);
+                        }else {
+                            valorHex = hexadecimal;
+                            hexadecimal = '#'+hexadecimal;
+                        }
+
+                        R = parseInt( valorHex.substring(0,2), 16);
+                        G = parseInt( valorHex.substring(2,4), 16);
+                        B = parseInt( valorHex.substring(4,6), 16);
+
+                        console.log('Rojo: '+R);
+                        console.log('Rojo: '+G);
+                        console.log('Rojo: '+B);
+
+                        //return 'El codigo hexadecimal <span style="background-color:'+hexadecimal+'">'+hexadecimal+'</span> en RGB es ('+R+', '+G+', '+B+')';
+
+                        return [R, G, B];
+                    }
+
+                    //capaResultado.innerHTML = aRGB('#FFCC00');
+
+                    var codigosColorRGB = aRGB('#FFCC00');
+                    console.log('Rojo: '+codigosColorRGB[0]);
+                    console.log('Verde: '+codigosColorRGB[1]);
+                    console.log('Azul: '+codigosColorRGB[2]);
+                </script>
+            </div>
+        </div>
+    </body>
+
+</html>
