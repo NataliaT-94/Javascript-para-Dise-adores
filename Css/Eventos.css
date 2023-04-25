@@ -1,0 +1,14 @@
+
+#calcular{
+    transform: all .3s linear 0;
+    -webkit-transform: all .3s linear 0;
+    -moz-transform: all .3s linear 0;
+    -ms-transform: all .3s linear 0;
+    -o-transform: all .3s linear 0;
+}
+#calcular:hover{
+    /* transform: rotate(270deg); */
+}
+.sobre{
+    padding: 20px!important;
+}

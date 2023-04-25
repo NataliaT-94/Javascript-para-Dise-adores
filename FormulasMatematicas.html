@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    function calcularParentesis(formula, resultado){
+        let posible = 'imposible con un solo grupo de parentesis';
+        for (i = 0; i < formula.length; i++) {
+            for (j = 0; j < formula.length + 1 - i; j++) {
+                const derecha = formula.substr(0, i);
+                const centro = formula.substr(i, j+1);
+                const izquierda = formula.substr(i+j+1, formula.length - j);
+                let generado = derecha+'('+centro+')'+izquierda;
+                // console.log(generado);
+                try {
+                    eval(generado); 
+                    let resuelto = eval(generado);
+                    if(resuelto == resultado){
+                        posible = generado + ': ' + resuelto;
+                    }
+                } catch (e) {
+                    // console.log('error: '+ generado);
+                }
+                
+            }
+        }
+        return posible;
+    }
+
+
+
+    console.log('A - ' + calcularParentesis('4+5*2+16-8/4', 32));
+    console.log('B - ' + calcularParentesis('32+8/2-2*3+4', 6));
+    console.log('C - ' + calcularParentesis('2*7+2*5-30/6-1', 28));
+</script>
+</html>
